@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:07:22 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/06 10:17:00 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/10 18:43:06 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	printf("%d\n", ft_isalpha('a'));
+/*	printf("%d\n", ft_isalpha('a'));
 	printf("%d\n", isalpha('a'));
 	printf("%d\n", ft_isdigit('9'));
 	printf("%d\n", isdigit('9'));
@@ -163,6 +163,12 @@ int	main(void)
 	ft_memset(&d, 1, 4);
 	printf("%d \n%d\n", c[2], d[2]);
 
+	int a0  = 0;
+	ft_memset(&a0,1,1);
+	ft_memset((char *)&a0 +1,1,1);
+	ft_memset((char *)&a0 +2,1,1); 
+	ft_memset((char *)&a0 +3,1,1); 
+	printf("%d",a0);
 		// -------- bzero -----------
 
 	printf("\n------------  bzero  ------------------\n\n");
@@ -172,14 +178,106 @@ int	main(void)
 	ft_bzero(&k, 1);
 	printf("%d \n %d", e, k);
 
-		// -------- bzero -----------
-
-	printf("\n------------  bzero  ------------------\n\n");
 	int o[] = {1, 2 , 3};
 	int p[] = {1, 2 , 3};
 	bzero(&o, 1);
 	ft_bzero(&p, 1);
 	printf("%d \n%d", o[0], p[0]);
 
- 	return (0);
+	printf("\n------------  memchr  ------------------\n\n");
+	// char *s = "hello world";
+	// int q = 'e';
+	// printf("%s \n", (char *)memchr((const void*)s, q, 8));
+	// char *y = "hello world";
+	// printf("%s \n", (char *)ft_memchr(NULL, q, 8));
+	// int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+	// char *ab = ft_memchr(tab, -1, 2);
+    // printf("%d", *((char *)ab));
+	// printf("%d", (unsigned char)-49);
+
+	// --------------------- memcpy ---------------------
+
+	printf("\n------------  memcpy  ------------------\n\n");
+
+		char *src = "hi";
+ 		char *buff1 = "hi";
+		ft_memcpy(buff1, src, 4);
+		printf("%s\n", buff1);
+		memcpy(buff1, src, 4);
+		printf("%s\n", buff1);
+
+ 		char *src2 = "hello \0 dexter morgan";
+		char buff2[2];
+		// memcpy(buff2, src2, 14);
+		// printf("%s\n", buff2 + 8);
+		ft_memcpy(buff2, src2, 14);
+		printf("%s\n", buff2 + 8);
+
+		int array [] = { '\201', '\200', '\200', '\200', '\200' };
+    	int copy[5];
+    	ft_memcpy( copy, array, 20);
+        
+    	for(int length = 0; length < 5; length++ ) {
+        	printf( "%d ", copy[ length ] );
+    	}
+    	printf( "\n");
+*/
+	// --------------------- memmove ---------------------
+	// printf("\n------------  memove  ------------------\n\n");
+ //char ptr0[10]="abcdef";
+	
+	// char src[10] = "hello";
+	// ft_memmove(src + 1, src , 4);
+	// printf("%s ft_memove : \n", src);
+	// int size = 128 ; 
+ 	// char *dst = (char *)malloc(sizeof(char) * size);
+ 	// char *data = (char *)malloc(sizeof(char) * size);
+	// __builtin___memset_chk (data, 'A', size, __builtin_object_size (data, 0));
+	// ft_memcpy(dst, data, size);
+	// printf("%s\n", dst );
+		
+	// --------------------- memcmp ---------------------
+	// printf("\n------------  memcpr  ------------------\n\n");
+	// printf("ft_memcmp %d\n", ft_memcmp("hel\200lo", "hello", 3));
+	// printf("memcmp %d\n", memcmp("hel\200lo", "hello", 3));
+	// return (0); 
+
+//          --------------------- substr ---------------------
+	// printf("\n------------  substr  ------------------\n\n");
+	// printf("ft_substr : %s\n",  ft_substr(NULL, 10, 10) );
+	// printf("ft_substr : %s\n",  ft_substr("hello dexter morgan", 5, 10) );
+
+//        --------------------- strjoin ---------------------
+	// printf("\n------------  strjoin  ------------------\n\n");
+	// printf("ft_substr : %s\n",  ft_strjoin("hello", " world"));
+	// printf("ft_substr : %s\n",  ft_strjoin("test", "2"));
+	// printf("ft_substr : %s\n",  ft_strjoin(NULL, "2"));
+
+
+//          --------------------- strtrim ---------------------
+
+	// printf("\n------------  strtrim  ------------------\n\n");
+	// printf("%s", ft_strtrim(" p", "\0 abc"));
+
+
+//          --------------------- itoi ---------------------
+
+	// printf("\n------------  itoi  ------------------\n\n");
+	// printf("%s\n", ft_itoa(100));
+	// printf("%s\n", ft_itoa(-15400));
+	// printf("%s\n", ft_itoa(56456487));
+	// printf("%s\n", ft_itoa(-102));
+	// printf("%s\n", ft_itoa(0));
+	// printf("%s\n", ft_itoa(-0));
+
+
+//          --------------------- split ---------------------
+
+	printf("\n------------  split  ------------------\n\n");
+	ft_split(" hello world ", ' ');
+	/*
+		
+	*/
+
+	return (0); 
 }
