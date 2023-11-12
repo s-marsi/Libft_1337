@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:04:38 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/09 18:40:22 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/12 11:16:40 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,7 @@ int		ft_atoi(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 char    *ft_itoa(int n);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 #endif
