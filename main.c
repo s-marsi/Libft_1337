@@ -6,14 +6,18 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:07:22 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/11 09:06:26 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/11 12:53:50 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 #include <stddef.h>
-
+char	test(unsigned int n, char c)
+	{
+		c = c + n;
+		return (c);
+	}
 int	main(void)
 {
 /*	printf("%d\n", ft_isalpha('a'));
@@ -197,7 +201,7 @@ int	main(void)
 
 	// --------------------- memcpy ---------------------
 
-	printf("\n------------  memcpy  ------------------\n\n");
+	// printf("\n------------  memcpy  ------------------\n\n");
 
 		char *src = "hi";
  		char *buff1 = "hi";
@@ -273,11 +277,30 @@ int	main(void)
 
 //          --------------------- split ---------------------
 
-	printf("\n------------  split  ------------------\n\n");
-	ft_split(" hello world ", ' ');
-	/*
-		
-	*/
+	// printf("\n------------  split  ------------------\n\n");
+	// char **str;
+	// int i = 0;
+	// str = ft_split(" hello dexter morgan ", ' ');
+	// while (i < 3)
+	// 	printf("%s\n", str[i++]);
+	// str[2] = NULL;
+	// if (str)
+	// {
+	// 	i = 0;
+	// 	free(str);
+	// }
+	
+	
+//          --------------------- strmapi ---------------------
+
+	// printf("\n------------  strmapi  ------------------\n\n");
+
+	
+	char *rachid = ft_strmapi("hello", test);
+	printf("%s", rachid);
+	free(rachid);
+
+	
 
 	return (0); 
 }
