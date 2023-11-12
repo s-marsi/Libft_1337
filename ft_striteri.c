@@ -5,14 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 11:15:52 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/12 11:16:25 by smarsi           ###   ########.fr       */
+/*   Created: 2023/11/12 11:17:51 by smarsi            #+#    #+#             */
+/*   Updated: 2023/11/12 11:29:53 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
+	int	i;
 
+	i = 0;
+	while (s[i])
+	{
+		f(i, s + i);
+		i++;
+	}
 }
