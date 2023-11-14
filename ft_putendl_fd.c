@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:04:38 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/12 21:06:32 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/13 18:14:10 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_putendl_fd(char *s, int fd)
 		return ;
 	while (*s)
 	{
-		write(fd, s, 1);
+		ft_putchar_fd(*s, fd);
 		s++;
 	}
-	write (fd, "\n", 1);
+	ft_putchar_fd ('\n', fd);
 }
