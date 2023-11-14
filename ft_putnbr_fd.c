@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:18:19 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/12 21:52:35 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/13 18:29:42 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,8 @@ void	ft_putnbr_fd(int n, int fd)
 	nb = n;
 	if (nb < 0)
 	{
-		write (fd, "-", 1);
+		ft_putchar_fd('-', fd);
 		nb = -nb;
-	}
-	if (nb < 10)
-	{
-		n = nb + '0';
-		write (fd, &n, 1);
-		return ;
 	}
 	divider = 1;
 	while (nb / divider >= 10)
@@ -35,7 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 	while (divider > 0)
 	{
 		n = (nb / divider) + '0';
-		write (fd, &n, 1);
+		ft_putchar_fd(n, fd);
 		nb = nb % divider;
 		divider /= 10;
 	}
