@@ -6,22 +6,20 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 20:57:13 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/12 21:12:14 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/13 18:13:27 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	if (fd != -1)
+	while (*s)
 	{
-		while (*s)
-		{
-			write(fd, s, 1);
-			s++;
-		}
+		ft_putchar_fd(*s, fd);
+		s++;
 	}
 }
