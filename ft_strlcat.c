@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:32:59 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/04 21:52:58 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/16 12:41:45 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	lenght_return;
 	size_t	i;
 
+	if (!dst && !dstsize)
+		return (0);
 	len_src = ft_strlen(src);
 	len_dst = ft_strlen(dst);
 	if (dstsize == 0 || dstsize < len_dst)
@@ -31,5 +33,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[len_dst + i] = '\0';
-	return (len_dst  + len_src);
+	return (len_dst + len_src);
 }
