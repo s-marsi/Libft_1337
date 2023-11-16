@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:43:58 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/06 10:03:18 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/07 16:18:11 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ int	ft_atoi(const char *str)
 	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
-	{
 		signe = -1;
-		str++;
-	}
-	if (*str == '+')
+	if (*str == '-' || *str == '+')
 		str++;
 	while (ft_isdigit(*str))
 	{
