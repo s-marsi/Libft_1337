@@ -6,61 +6,13 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:11:26 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/10 21:48:31 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/16 12:33:22 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// static	void	free_allocation(char *str)
-// {
-// 	free(str);
-// }
-
-static	int	count_word(char const *s, char c)
-{
-	int	count;
-	int	flag ;
-	int	i;
-
-	count = 0;
-	flag = 1;
-	i = 0;
-	while (s[i])
-	{
-		if (flag && s[i] != c)
-		{
-			flag = 0;
-			count++;
-		}
-		if (s[i] == c)
-			flag = 1;
-		i++;
-	}
-	return (count);
-}
-
-static	char	*get_word(char const *s, char c, int *index)
-{
-	int	i;
-	int	start;
-	char *str;
-
-	i = *index;
-	while (s[i] && s[i] == c)
-		i++;	
-	start = i;
-	while (s[i] && s[i] != c)
-		i++;
-	str = ft_calloc((i - start) + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s + start, (i - start) + 1);
-	*index = i;
-	return (str);
-}
-
-static	void ft_free(char **s)
+static	void	ft_free(char **s)
 {
 	int	i;
 
@@ -70,26 +22,76 @@ static	void ft_free(char **s)
 	free(s);
 }
 
+static	int	count_word(char const *s, char c)
+{
+	int	count;
+	int	flag;
+	int	i;
+
+	count = 0;
+	flag = 1;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c && flag)
+		{
+			count++;
+			flag = 0;
+		}
+		if (s[i] == c)
+			flag = 1;
+		i++;
+	}
+	return (count);
+}
+
+static	char	*get_word(char *dst, char const *src, char c, int	*index)
+{
+	int	i;
+	int	start;
+	int	len;
+
+	i = *index;
+	while (src[i] && src[i] == c)
+		i++;
+	start = i;
+	while (src[i] && src[i] != c)
+		i++;
+	len = (i - start) + 1;
+	dst = ft_calloc(len, sizeof(char));
+	ft_strlcpy(dst, src + start, len);
+	*index = i;
+	return (dst);
+}
+
+static char	**fill_array(char **dst, char const *src, char c, int number_word)
+{
+	int	i;
+	int	index_word;
+
+	index_word = 0;
+	i = 0;
+	while (i < number_word)
+	{
+		dst[i] = get_word(dst[i], src, c, &index_word);
+		if (!dst[i])
+			ft_free(dst);
+		i++;
+	}
+	return (dst);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	int		index;
-	int		i;
+	int		count;
 
-	str = ft_calloc(count_word(s, c) + 1, sizeof(char *));
+	if (!s)
+		return (NULL);
+	count = count_word(s, c);
+	str = ft_calloc(count + 1, sizeof(char *));
 	if (!str)
 		return (NULL);
-	i = 0;
-	index = 0;
-	while (i < count_word(s, c))
-	{
-		str[i] = get_word(s, c, &index);
-		if (!str[i])
-		{
-			ft_free(str);
-			return (NULL);
-		}
-		i++;
-	}
+	str = fill_array(str, s, c, count);
 	return (str);
 }
