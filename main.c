@@ -6,18 +6,24 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:07:22 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/11 12:53:50 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/13 17:31:31 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 #include <stddef.h>
-char	test(unsigned int n, char c)
-	{
-		c = c + n;
-		return (c);
-	}
+// char	mapi(unsigned int n, char c)
+// 	{
+// 		c = c + n;
+// 		return (c);
+// 	}
+
+// void iteri(unsigned int c, char *s)
+// {
+// 	s[c] = 'b';
+// }
+
 int	main(void)
 {
 /*	printf("%d\n", ft_isalpha('a'));
@@ -296,11 +302,65 @@ int	main(void)
 	// printf("\n------------  strmapi  ------------------\n\n");
 
 	
-	char *rachid = ft_strmapi("hello", test);
-	printf("%s", rachid);
-	free(rachid);
+	// char *rachid = ft_strmapi("hello", mapi);
+	// printf("%s", rachid);
+	// free(rachid);
 
 	
+	
+//          --------------------- striteri ---------------------
+
+	// printf("\n------------  striteri  ------------------\n\n");
+	// char str[] = "tested";
+	// // void (*p) (unsigned int , char *) = &iteri;
+	// ft_striteri(str, &iteri);
+	// printf("%s", str);
+
+
+
+//          --------------------- ft_putchar_fd ---------------------
+
+	// printf("\n------------  ft_putchar_fd  ------------------\n\n");
+	// int	fd = creat("aaaaa.txt", 400);
+	// int	c = open("aaaa.txt", O_CREAT | O_RDWR, 400);
+	// ft_putchar_fd('k', fd);
+	// ft_putchar_fd('k', c);
+	// ft_putchar_fd('k', c);
+
+	
+//          --------------------- ft_putstr_fd ---------------------
+
+/*  
+	printf("\n------------  ft_putstr_fd  ------------------\n\n");
+	int fd = open("a.txt", O_CREAT | O_RDWR, 400);
+	int c = creat("aa.txt", 400);
+	ft_putstr_fd("hello from main", fd);
+	ft_putstr_fd("hello from main", c);
+*/
+
+
+
+//          --------------------- ft_putendl_fd ---------------------
+
+
+/*
+	printf("\n------------  ft_putendl_fd  ------------------\n\n");
+	int fd = open("a.txt", O_CREAT | O_RDWR, 400);
+	int c = creat("aa.txt", 400);
+	ft_putendl_fd("hello from main", fd);
+	ft_putendl_fd("hello from main", c);
+*/
+
+//          --------------------- ft_putnbr_fd ---------------------
+
+
+// /*
+	printf("\n------------  ft_putnbr_fd  ------------------\n\n");
+	// int fd = open("a.txt", O_CREAT | O_RDWR, 400);
+	// ft_putnbr_fd(-2147483647, 1);
+// */
+
 
 	return (0); 
+
 }
