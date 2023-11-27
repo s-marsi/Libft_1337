@@ -8,18 +8,18 @@
   - [Installation](#installation)
 - [Usage](#usage)
 
+## Subject :
 <ol style="margin-left: 15px;">
   <li style="font-size: 20px; font-weight: 600; color: red;">
-    Subject : <a href="https://cdn.intra.42.fr/pdf/pdf/111289/en.subject.pdf" target="_blank" style="color: red; font-size: 15.5px; font-weight: 300; margin-left: 10px;"> subject.pdf </a>
+     <a href="https://cdn.intra.42.fr/pdf/pdf/111289/en.subject.pdf" target="_blank" style="color: red; font-size: 15.5px; font-weight: 300; margin-left: 10px;"> subject.pdf </a>
   </li>
 </ol>
 
+## Description :
 <ol style="margin-left: 15px;">
-  <li style="font-size: 20px; font-weight: 600;">
-    Description :
-    <ul>
-      <li>The libft project is a custom C library containing a collection of essential functions that can be utilized in various C programming tasks. This library serves as a reusable set of functions, providing common functionality not necessarily present in the standard C library.</li>
-    </ul>
+  <li>
+    The libft project is a custom C library containing a collection of essential functions that can be utilized in various C programming tasks. This library serves as a reusable set of functions,       
+    providing common functionality not necessarily present in the standard C library.
   </li>
 </ol>
 
