@@ -25,12 +25,14 @@
 <ol style="margin-bottom: 5px; text-decoration: none; font-size: 20px; font-weight: 600;">
     Installation :
     <ol style="margin-bottom: 5px; text-decoration: none; font-size: 20px; font-weight: 600;">
-         <li style="list-style: none; font-weight: 400;margin-left: 30px;font-size: 18px;margin-top: 15px;">1 - Clone the repository: <br>
+         <li style="list-style: none; font-weight: 400;margin-left: 30px;font-size: 18px;margin-top: 15px;">
+            1 - Clone the repository: <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git clone https://github.com/s-marsi/libft.git libft<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cd libft
         </li>
        
-        <li style="list-style: none; font-weight: 400;margin-left: 30px;font-size: 18px;margin-top: 15px;"> 2 - Compile the library: <br>
+         <li style="list-style: none; font-weight: 400;margin-left: 30px;font-size: 18px;margin-top: 15px;"> 
+            2 - Compile the library: <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make all bonus (This will generate the libft.a library file.) <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make clean  (this will remove object files)
         </li>
