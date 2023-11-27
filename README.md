@@ -1,4 +1,4 @@
-# <span style="font-size: 50px;font-weight: 600; color: red;margin-left: 42%;"> LIB</span> <span style="font-size: 50px;font-weight: 600">FT</span>
+# <span style="color: red;">LIB</span><span style="color: black;">FT</span> (1337)
 
 ## Table of Contents
 - [Subject](#subject)
@@ -9,11 +9,9 @@
 - [Usage](#usage)
 
 ## Subject :
-<ol style="margin-left: 15px;">
-  <li style="font-size: 20px; font-weight: 600; color: red;">
-     <a href="https://cdn.intra.42.fr/pdf/pdf/111289/en.subject.pdf" target="_blank" style="color: red; font-size: 15.5px; font-weight: 300; margin-left: 10px;"> subject.pdf </a>
-  </li>
-</ol>
+
+- <a href="https://cdn.intra.42.fr/pdf/pdf/111289/en.subject.pdf" target="_blank" style="color: red; font-size: 15.5px; font-weight: 300; margin-left: 10px;"> subject.pdf </a>
+
 
 ## Description :
 - The libft project is a custom C library containing a collection of essential functions that can be utilized in various C programming tasks. This library serves as a reusable set of functions,      
