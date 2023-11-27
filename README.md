@@ -37,9 +37,13 @@ providing common functionality not necessarily present in the standard C library
     ```
 ## Usage :
 - To use the libft library in your C project, include the header file in your source code and link against the compiled library.</li>
+  ```bash
   #include "libft.h"</li>
+   ```
 - Compile your program with the libft.a library:
+  ```bash
   cc main.c libft.a
+   ```
 
 
 
