@@ -35,17 +35,12 @@ providing common functionality not necessarily present in the standard C library
     make all bonus  # This will generate the libft.a library file.
     make clean      # This will remove object files.
     ```
+## Usage :
+- To use the libft library in your C project, include the header file in your source code and link against the compiled library.</li>
+  #include "libft.h"</li>
+- Compile your program with the libft.a library:
+  cc main.c libft.a
 
-<ol style="margin-left: 15px;">
-  <li style="font-size: 20px; font-weight: 600;">
-    Usage :
-    <ul>
-      <li>To use the libft library in your C project, include the header file in your source code and link against the compiled library.</li>
-      <li>#include "libft.h"</li>
-      <li>Compile your program with the libft.a library:</li>
-      <li>```bash
-        cc main.c libft.a
-        ```</li>
-    </ul>
-  </li>
-</ol>
+
+
+
