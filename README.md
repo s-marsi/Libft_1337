@@ -16,10 +16,8 @@
 </ol>
 
 ## Description :
-
-
-    - The libft project is a custom C library containing a collection of essential functions that can be utilized in various C programming tasks. This library serves as a reusable set of functions,       
-    providing common functionality not necessarily present in the standard C library.
+- The libft project is a custom C library containing a collection of essential functions that can be utilized in various C programming tasks. This library serves as a reusable set of functions,      
+providing common functionality not necessarily present in the standard C library.
     
 
 ## Getting Started
