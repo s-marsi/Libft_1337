@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:40:03 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/07 09:42:50 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/16 12:36:24 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	{
 		*dest = *source;
 		dest++;
-		source++; 
-	} 
+		source++;
+	}
 	return (dst);
 }

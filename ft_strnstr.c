@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:23:49 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/16 12:40:54 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/26 17:25:06 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!haystack && !len)
+	if (!haystack && !len && needle)
 		return (NULL);
 	if (!*needle)
 		return ((char *) haystack);

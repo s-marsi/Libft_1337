@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 13:25:47 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/09 18:32:15 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/16 12:39:28 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static	int	searche_value(int search, char const *set)
 static char	*start_trim(char const *s1, char const *set)
 {
 	while (searche_value(*s1, set))
-        s1++;
+		s1++;
 	return ((char *) s1);
 }
 
@@ -52,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	str = start_trim(s1, set);
 	if (*str == '\0')
-		return (strdup(""));
+		return (ft_strdup(""));
 	i = end_trim(str, set);
 	return_str = ft_calloc(i + 1, sizeof(char));
 	if (!return_str)

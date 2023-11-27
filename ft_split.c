@@ -6,7 +6,7 @@
 /*   By: smarsi <smarsi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:11:26 by smarsi            #+#    #+#             */
-/*   Updated: 2023/11/16 12:33:22 by smarsi           ###   ########.fr       */
+/*   Updated: 2023/11/23 16:57:16 by smarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,15 @@ static char	**fill_array(char **dst, char const *src, char c, int number_word)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
+	char	**dst;
 	int		count;
 
 	if (!s)
 		return (NULL);
 	count = count_word(s, c);
-	str = ft_calloc(count + 1, sizeof(char *));
-	if (!str)
+	dst = ft_calloc(count + 1, sizeof(char *));
+	if (!dst)
 		return (NULL);
-	str = fill_array(str, s, c, count);
-	return (str);
+	dst = fill_array(dst, s, c, count);
+	return (dst);
 }
