@@ -1,4 +1,4 @@
-# <span style="color: red;">LIB</span><span style="color: black;">FT</span> (1337)
+# <span style="color: red;">LIB</span>FT (1337)
 
 ## Table of Contents
 - [Subject](#subject)
